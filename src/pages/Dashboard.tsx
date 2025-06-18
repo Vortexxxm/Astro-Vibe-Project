@@ -50,7 +50,7 @@ const Dashboard = () => {
           <Button
             onClick={handleLogout}
             variant="outline"
-            className="border-zodiac-gold/30 text-zodiac-star hover:bg-zodiac-gold/20 text-sm"
+            className="border-zodiac-gold/30 text-zodiac-star hover:bg-zodiac-gold/10 bg-transparent text-sm backdrop-blur-sm"
             size="sm"
           >
             <LogOut className="w-4 h-4 ml-2" />
