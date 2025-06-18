@@ -32,20 +32,35 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
+  React.useEffect(() => {
+    // Check for existing user on app start
+    const savedUser = localStorage.getItem('zodiac_user');
+    if (savedUser) {
+      try {
+        const userData = JSON.parse(savedUser);
+        setUser(userData);
+      } catch (error) {
+        console.error('Error parsing saved user data:', error);
+        localStorage.removeItem('zodiac_user');
+      }
+    }
+  }, []);
+
   const login = async (email: string, password: string) => {
     setIsLoading(true);
     try {
-      // Simulate API call
-      const savedUser = localStorage.getItem('zodiac_user');
-      if (savedUser) {
-        const userData = JSON.parse(savedUser);
-        if (userData.email === email) {
-          setUser(userData);
-        } else {
-          throw new Error('Invalid credentials');
-        }
+      // Check if user exists in localStorage
+      const savedUsers = localStorage.getItem('zodiac_users');
+      const users = savedUsers ? JSON.parse(savedUsers) : [];
+      
+      const foundUser = users.find((u: any) => u.email === email && u.password === password);
+      
+      if (foundUser) {
+        const { password: _, ...userWithoutPassword } = foundUser;
+        setUser(userWithoutPassword);
+        localStorage.setItem('zodiac_user', JSON.stringify(userWithoutPassword));
       } else {
-        throw new Error('User not found');
+        throw new Error('البيانات غير صحيحة');
       }
     } finally {
       setIsLoading(false);
@@ -55,15 +70,30 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const register = async (userData: Omit<User, 'id'> & { password: string }) => {
     setIsLoading(true);
     try {
-      // Simulate API call
-      const newUser: User = {
+      // Get existing users or create empty array
+      const savedUsers = localStorage.getItem('zodiac_users');
+      const users = savedUsers ? JSON.parse(savedUsers) : [];
+      
+      // Check if user already exists
+      const existingUser = users.find((u: any) => u.email === userData.email);
+      if (existingUser) {
+        throw new Error('المستخدم موجود بالفعل');
+      }
+      
+      // Create new user
+      const newUser: User & { password: string } = {
         ...userData,
         id: Date.now().toString(),
       };
-      delete (newUser as any).password;
       
-      localStorage.setItem('zodiac_user', JSON.stringify(newUser));
-      setUser(newUser);
+      // Add to users array
+      users.push(newUser);
+      localStorage.setItem('zodiac_users', JSON.stringify(users));
+      
+      // Set current user (without password)
+      const { password: _, ...userWithoutPassword } = newUser;
+      setUser(userWithoutPassword);
+      localStorage.setItem('zodiac_user', JSON.stringify(userWithoutPassword));
     } finally {
       setIsLoading(false);
     }
