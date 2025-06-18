@@ -80,20 +80,23 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         throw new Error('المستخدم موجود بالفعل');
       }
       
-      // Create new user
+      // Create new user with unique ID
       const newUser: User & { password: string } = {
         ...userData,
-        id: Date.now().toString(),
+        id: `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       };
       
-      // Add to users array
+      // Add to users array and save
       users.push(newUser);
       localStorage.setItem('zodiac_users', JSON.stringify(users));
       
-      // Set current user (without password)
+      // Set current user (without password) and save as current user
       const { password: _, ...userWithoutPassword } = newUser;
       setUser(userWithoutPassword);
       localStorage.setItem('zodiac_user', JSON.stringify(userWithoutPassword));
+      
+      console.log('تم إنشاء الحساب بنجاح:', userWithoutPassword);
+      console.log('جميع المستخدمين:', users.length);
     } finally {
       setIsLoading(false);
     }
