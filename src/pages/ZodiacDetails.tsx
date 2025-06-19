@@ -37,7 +37,7 @@ const ZodiacDetails = () => {
           <Button
             onClick={() => navigate('/dashboard')}
             variant="outline"
-            className="border-zodiac-gold/30 text-zodiac-star hover:bg-zodiac-gold/20"
+            className="border-zodiac-gold/30 text-zodiac-star hover:bg-zodiac-gold/20 bg-transparent backdrop-blur-sm"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Retour

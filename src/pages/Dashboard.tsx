@@ -43,7 +43,7 @@ const Dashboard = () => {
         <div className="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8 gap-4">
           <div className="text-center sm:text-left">
             <h1 className="text-2xl sm:text-3xl font-bold text-zodiac-gold">
-              Salut {user.name} 👋
+              Bonjour {user.name} 👋
             </h1>
             <p className="text-zodiac-star/70 text-sm sm:text-base">Découvrez l'univers de votre signe astrologique</p>
           </div>
