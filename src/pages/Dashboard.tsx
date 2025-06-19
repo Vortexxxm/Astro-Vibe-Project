@@ -47,15 +47,25 @@ const Dashboard = () => {
             </h1>
             <p className="text-zodiac-star/70 text-sm sm:text-base">Découvrez l'univers de votre signe astrologique</p>
           </div>
-          <Button
-            onClick={handleLogout}
-            variant="outline"
-            className="border-zodiac-gold/30 text-zodiac-star hover:bg-zodiac-gold/10 bg-transparent text-sm backdrop-blur-sm"
-            size="sm"
-          >
-            <LogOut className="w-4 h-4 mr-2" />
-            Déconnexion
-          </Button>
+          <div className="flex gap-2">
+            <Button
+              onClick={() => navigate('/home')}
+              variant="outline"
+              className="border-zodiac-purple/30 text-zodiac-star hover:bg-zodiac-purple/10 bg-transparent text-sm backdrop-blur-sm"
+              size="sm"
+            >
+              Accueil
+            </Button>
+            <Button
+              onClick={handleLogout}
+              variant="outline"
+              className="border-zodiac-gold/30 text-zodiac-star hover:bg-zodiac-gold/10 bg-transparent text-sm backdrop-blur-sm"
+              size="sm"
+            >
+              <LogOut className="w-4 h-4 mr-2" />
+              Déconnexion
+            </Button>
+          </div>
         </div>
 
         {/* User's Zodiac Section */}
