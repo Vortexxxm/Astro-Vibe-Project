@@ -119,7 +119,7 @@ const Index = () => {
               <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden bg-gradient-to-br from-zodiac-gold/20 to-zodiac-purple/20 p-1 animate-pulse border-2 border-zodiac-gold/30">
                 <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-zodiac-gold to-zodiac-purple flex items-center justify-center">
                   <img 
-                    src="/lovable-uploads/b124b8ce-2312-4c1f-8af2-a5fc0b03508e.png" 
+                    src="/WhatsApp Image 2025-06-19 at 13.22.04_d91f28cc.jpg" 
                     alt="Astro Vibe Logo" 
                     className="w-full h-full object-cover rounded-full logo-glow"
                   />
