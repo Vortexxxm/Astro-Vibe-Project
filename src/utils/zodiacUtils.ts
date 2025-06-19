@@ -17,184 +17,184 @@ export interface ZodiacSign {
 
 export const zodiacSigns: Record<string, ZodiacSign> = {
   aries: {
-    name: 'الحمل',
+    name: 'Bélier',
     nameEn: 'aries',
     symbol: '♈',
-    element: 'النار',
+    element: 'Feu',
     startDate: '03-21',
     endDate: '04-19',
     traits: {
-      positive: ['قيادي', 'شجاع', 'متحمس', 'مبادر', 'صريح'],
-      negative: ['متهور', 'عصبي', 'أناني', 'صبره قليل', 'متسرع'],
-      characteristics: ['يحب التحديات', 'ديناميكي', 'مستقل', 'واثق من نفسه', 'طموح']
+      positive: ['Leader', 'Courageux', 'Enthousiaste', 'Initiateur', 'Franc'],
+      negative: ['Imprudent', 'Nerveux', 'Égoïste', 'Impatient', 'Précipité'],
+      characteristics: ['Aime les défis', 'Dynamique', 'Indépendant', 'Confiant', 'Ambitieux']
     },
     colors: ['#FF4500', '#DC143C'],
-    description: 'برج الحمل هو أول الأبراج الفلكية، يتميز أصحابه بالقيادة والشجاعة والحماس في كل ما يقومون به.'
+    description: 'Le Bélier est le premier signe astrologique, ses natifs se distinguent par leur leadership, leur courage et leur enthousiasme dans tout ce qu\'ils entreprennent.'
   },
   taurus: {
-    name: 'الثور',
+    name: 'Taureau',
     nameEn: 'taurus',
     symbol: '♉',
-    element: 'الأرض',
+    element: 'Terre',
     startDate: '04-20',
     endDate: '05-20',
     traits: {
-      positive: ['صبور', 'موثوق', 'عملي', 'مسؤول', 'مخلص'],
-      negative: ['عنيد', 'كسول', 'مادي', 'بطيء', 'جامد'],
-      characteristics: ['يحب الراحة', 'حسي', 'فني', 'محب للطبيعة', 'مستقر']
+      positive: ['Patient', 'Fiable', 'Pratique', 'Responsable', 'Fidèle'],
+      negative: ['Têtu', 'Paresseux', 'Matérialiste', 'Lent', 'Rigide'],
+      characteristics: ['Aime le confort', 'Sensuel', 'Artistique', 'Amoureux de la nature', 'Stable']
     },
     colors: ['#228B22', '#8FBC8F'],
-    description: 'برج الثور يتميز بالثبات والاستقرار، أصحابه يحبون الجمال والراحة ولديهم إرادة قوية.'
+    description: 'Le Taureau se distingue par sa stabilité et sa constance, ses natifs aiment la beauté et le confort et ont une volonté forte.'
   },
   gemini: {
-    name: 'الجوزاء',
+    name: 'Gémeaux',
     nameEn: 'gemini',
     symbol: '♊',
-    element: 'الهواء',
+    element: 'Air',
     startDate: '05-21',
     endDate: '06-20',
     traits: {
-      positive: ['ذكي', 'فضولي', 'متكيف', 'مرح', 'تواصلي'],
-      negative: ['متقلب', 'سطحي', 'مشتت', 'عصبي', 'غير مستقر'],
-      characteristics: ['سريع التعلم', 'محب للتغيير', 'اجتماعي', 'بارع في الكلام', 'متعدد المواهب']
+      positive: ['Intelligent', 'Curieux', 'Adaptable', 'Joyeux', 'Communicatif'],
+      negative: ['Changeant', 'Superficiel', 'Dispersé', 'Nerveux', 'Instable'],
+      characteristics: ['Apprend vite', 'Aime le changement', 'Social', 'Eloquent', 'Multi-talentueux']
     },
     colors: ['#FFD700', '#FFA500'],
-    description: 'برج الجوزاء يتميز بالذكاء والفضول، أصحابه محبون للتعلم والتواصل مع الآخرين.'
+    description: 'Les Gémeaux se distinguent par leur intelligence et leur curiosité, ils aiment apprendre et communiquer avec les autres.'
   },
   cancer: {
-    name: 'السرطان',
+    name: 'Cancer',
     nameEn: 'cancer',
     symbol: '♋',
-    element: 'الماء',
+    element: 'Eau',
     startDate: '06-21',
     endDate: '07-22',
     traits: {
-      positive: ['عاطفي', 'رحيم', 'حنون', 'وفي', 'حدسي'],
-      negative: ['حساس جداً', 'متقلب المزاج', 'متشبث', 'قلق', 'انطوائي'],
-      characteristics: ['محب للعائلة', 'حماية', 'خيالي', 'ذاكرة قوية', 'عميق المشاعر']
+      positive: ['Émotionnel', 'Compatissant', 'Tendre', 'Fidèle', 'Intuitif'],
+      negative: ['Très sensible', 'Lunatique', 'Possessif', 'Anxieux', 'Introverti'],
+      characteristics: ['Amoureux de la famille', 'Protecteur', 'Imaginatif', 'Bonne mémoire', 'Profondément émotionnel']
     },
     colors: ['#87CEEB', '#4682B4'],
-    description: 'برج السرطان يتميز بالعاطفة والحنان، أصحابه محبون للعائلة ولديهم حدس قوي.'
+    description: 'Le Cancer se distingue par l\'émotion et la tendresse, ses natifs sont attachés à la famille et ont une forte intuition.'
   },
   leo: {
-    name: 'الأسد',
+    name: 'Lion',
     nameEn: 'leo',
     symbol: '♌',
-    element: 'النار',
+    element: 'Feu',
     startDate: '07-23',
     endDate: '08-22',
     traits: {
-      positive: ['كريم', 'واثق', 'مسلي', 'قوي', 'مبدع'],
-      negative: ['متكبر', 'عنيد', 'دراماتيكي', 'مهيمن', 'متمركز حول الذات'],
-      characteristics: ['محب للأضواء', 'ملكي', 'مؤثر', 'منظم', 'طاقة إيجابية']
+      positive: ['Généreux', 'Confiant', 'Divertissant', 'Fort', 'Créatif'],
+      negative: ['Arrogant', 'Têtu', 'Dramatique', 'Dominateur', 'Égocentrique'],
+      characteristics: ['Aime les projecteurs', 'Royal', 'Influent', 'Organisé', 'Énergie positive']
     },
     colors: ['#FFD700', '#FF8C00'],
-    description: 'برج الأسد ملك الأبراج، يتميز أصحابه بالثقة والكرم وحب الظهور والإبداع.'
+    description: 'Le Lion est le roi des signes, ses natifs se distinguent par leur confiance, leur générosité et leur amour du spectacle et de la création.'
   },
   virgo: {
-    name: 'العذراء',
+    name: 'Vierge',
     nameEn: 'virgo',
     symbol: '♍',
-    element: 'الأرض',
+    element: 'Terre',
     startDate: '08-23',
     endDate: '09-22',
     traits: {
-      positive: ['منظم', 'دقيق', 'مفيد', 'عملي', 'متواضع'],
-      negative: ['ناقد', 'قلق', 'كثير التفكير', 'محرج', 'صعب الإرضاء'],
-      characteristics: ['محب للكمال', 'تحليلي', 'خدوم', 'عقلاني', 'مسؤول']
+      positive: ['Organisé', 'Précis', 'Serviable', 'Pratique', 'Modeste'],
+      negative: ['Critique', 'Anxieux', 'Trop réfléchi', 'Timide', 'Difficile à satisfaire'],
+      characteristics: ['Amoureux de la perfection', 'Analytique', 'Serviable', 'Rationnel', 'Responsable']
     },
     colors: ['#9ACD32', '#6B8E23'],
-    description: 'برج العذراء يتميز بالدقة والتنظيم، أصحابه محبون للكمال ومساعدة الآخرين.'
+    description: 'La Vierge se distingue par la précision et l\'organisation, ses natifs aiment la perfection et aider les autres.'
   },
   libra: {
-    name: 'الميزان',
+    name: 'Balance',
     nameEn: 'libra',
     symbol: '♎',
-    element: 'الهواء',
+    element: 'Air',
     startDate: '09-23',
     endDate: '10-22',
     traits: {
-      positive: ['عادل', 'دبلوماسي', 'مسالم', 'أنيق', 'اجتماعي'],
-      negative: ['متردد', 'سطحي', 'كسول', 'معتمد على الآخرين', 'مراوغ'],
-      characteristics: ['محب للجمال', 'متوازن', 'رومانسي', 'فني', 'صانع سلام']
+      positive: ['Juste', 'Diplomatique', 'Pacifique', 'Élégant', 'Social'],
+      negative: ['Indécis', 'Superficiel', 'Paresseux', 'Dépendant des autres', 'Évitant'],
+      characteristics: ['Amoureux de la beauté', 'Équilibré', 'Romantique', 'Artistique', 'Pacificateur']
     },
     colors: ['#FFB6C1', '#DDA0DD'],
-    description: 'برج الميزان يسعى للعدالة والتوازن، أصحابه محبون للجمال والسلام والعلاقات المتناغمة.'
+    description: 'La Balance recherche la justice et l\'équilibre, ses natifs aiment la beauté, la paix et les relations harmonieuses.'
   },
   scorpio: {
-    name: 'العقرب',
+    name: 'Scorpion',
     nameEn: 'scorpio',
     symbol: '♏',
-    element: 'الماء',
+    element: 'Eau',
     startDate: '10-23',
     endDate: '11-21',
     traits: {
-      positive: ['قوي الإرادة', 'شجاع', 'مخلص', 'حدسي', 'عاطفي'],
-      negative: ['غيور', 'انتقامي', 'كتوم', 'مسيطر', 'متشكك'],
-      characteristics: ['غامض', 'عميق', 'متحول', 'قوي', 'محقق']
+      positive: ['Volontaire', 'Courageux', 'Fidèle', 'Intuitif', 'Émotionnel'],
+      negative: ['Jaloux', 'Vengeur', 'Secret', 'Contrôlant', 'Méfiant'],
+      characteristics: ['Mystérieux', 'Profond', 'Transformateur', 'Fort', 'Enquêteur']
     },
     colors: ['#8B0000', '#800080'],
-    description: 'برج العقرب من أقوى الأبراج، يتميز أصحابه بالغموض والقوة العاطفية والإرادة الصلبة.'
+    description: 'Le Scorpion est l\'un des signes les plus puissants, ses natifs se distinguent par le mystère, la force émotionnelle et la volonté ferme.'
   },
   sagittarius: {
-    name: 'القوس',
+    name: 'Sagittaire',
     nameEn: 'sagittarius',
     symbol: '♐',
-    element: 'النار',
+    element: 'Feu',
     startDate: '11-22',
     endDate: '12-21',
     traits: {
-      positive: ['متفائل', 'مغامر', 'صريح', 'فلسفي', 'حر'],
-      negative: ['متهور', 'عديم الصبر', 'مبذر', 'غير مسؤول', 'متسرع'],
-      characteristics: ['محب للسفر', 'باحث عن الحقيقة', 'محب للحرية', 'متعلم', 'مرح']
+      positive: ['Optimiste', 'Aventurier', 'Franc', 'Philosophe', 'Libre'],
+      negative: ['Imprudent', 'Impatient', 'Dépensier', 'Irresponsable', 'Précipité'],
+      characteristics: ['Amoureux du voyage', 'Chercheur de vérité', 'Amoureux de la liberté', 'Apprenant', 'Joyeux']
     },
     colors: ['#800080', '#4B0082'],
-    description: 'برج القوس محب للحرية والمغامرة، أصحابه متفائلون ويحبون استكشاف العالم والفلسفة.'
+    description: 'Le Sagittaire aime la liberté et l\'aventure, ses natifs sont optimistes et aiment explorer le monde et la philosophie.'
   },
   capricorn: {
-    name: 'الجدي',
+    name: 'Capricorne',
     nameEn: 'capricorn',
     symbol: '♑',
-    element: 'الأرض',
+    element: 'Terre',
     startDate: '12-22',
     endDate: '01-19',
     traits: {
-      positive: ['منضبط', 'طموح', 'مسؤول', 'صبور', 'عملي'],
-      negative: ['متشائم', 'صلب', 'باردة المشاعر', 'انتهازي', 'مهووس بالعمل'],
-      characteristics: ['محب للنجاح', 'منظم', 'تقليدي', 'قائد', 'محافظ']
+      positive: ['Discipliné', 'Ambitieux', 'Responsable', 'Patient', 'Pratique'],
+      negative: ['Pessimiste', 'Rigide', 'Froid émotionnellement', 'Opportuniste', 'Obsédé par le travail'],
+      characteristics: ['Amoureux du succès', 'Organisé', 'Traditionnel', 'Leader', 'Conservateur']
     },
     colors: ['#2F4F4F', '#556B2F'],
-    description: 'برج الجدي يتميز بالطموح والانضباط، أصحابه محبون للنجاح والمسؤولية والتنظيم.'
+    description: 'Le Capricorne se distingue par l\'ambition et la discipline, ses natifs aiment le succès, la responsabilité et l\'organisation.'
   },
   aquarius: {
-    name: 'الدلو',
+    name: 'Verseau',
     nameEn: 'aquarius',
     symbol: '♒',
-    element: 'الهواء',
+    element: 'Air',
     startDate: '01-20',
     endDate: '02-18',
     traits: {
-      positive: ['مبدع', 'مستقل', 'إنساني', 'ذكي', 'أصيل'],
-      negative: ['منعزل', 'عنيد', 'متمرد', 'غير عاطفي', 'غير منتظم'],
-      characteristics: ['محب للتجديد', 'مفكر', 'اجتماعي', 'متحرر', 'صديق مخلص']
+      positive: ['Créatif', 'Indépendant', 'Humanitaire', 'Intelligent', 'Original'],
+      negative: ['Isolé', 'Têtu', 'Rebelle', 'Non émotionnel', 'Irrégulier'],
+      characteristics: ['Amoureux du renouveau', 'Penseur', 'Social', 'Libéré', 'Ami fidèle']
     },
     colors: ['#00CED1', '#20B2AA'],
-    description: 'برج الدلو مبدع ومتحرر، أصحابه محبون للتجديد والإنسانية ولديهم أفكار مبتكرة.'
+    description: 'Le Verseau est créatif et libéré, ses natifs aiment le renouveau et l\'humanité et ont des idées innovantes.'
   },
   pisces: {
-    name: 'الحوت',
+    name: 'Poissons',
     nameEn: 'pisces',
     symbol: '♓',
-    element: 'الماء',
+    element: 'Eau',
     startDate: '02-19',
     endDate: '03-20',
     traits: {
-      positive: ['حساس', 'فني', 'رحيم', 'حدسي', 'متفهم'],
-      negative: ['حالم', 'هارب من الواقع', 'ضعيف الإرادة', 'فوضوي', 'متشائم'],
-      characteristics: ['خيالي', 'روحاني', 'مبدع', 'متعاطف', 'غامض']
+      positive: ['Sensible', 'Artistique', 'Compatissant', 'Intuitif', 'Compréhensif'],
+      negative: ['Rêveur', 'Fuyant la réalité', 'Faible de volonté', 'Désorganisé', 'Pessimiste'],
+      characteristics: ['Imaginatif', 'Spirituel', 'Créatif', 'Empathique', 'Mystérieux']
     },
     colors: ['#7B68EE', '#9370DB'],
-    description: 'برج الحوت حساس وفني، أصحابه حالمون ومبدعون ولديهم حدس قوي وطبيعة روحانية.'
+    description: 'Les Poissons sont sensibles et artistiques, ils sont rêveurs et créatifs avec une forte intuition et une nature spirituelle.'
   }
 };
 
