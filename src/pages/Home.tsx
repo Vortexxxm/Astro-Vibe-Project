@@ -1,19 +1,49 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import StarField from '@/components/StarField';
-import { Sparkles, Users, Phone, Mail } from 'lucide-react';
+import { Sparkles, Users, Phone, Mail, User, LogOut } from 'lucide-react';
+import { useAuth } from '@/contexts/AuthContext';
 
 const Home = () => {
   const navigate = useNavigate();
+  const { user, logout } = useAuth();
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+  };
 
   return (
     <div className="min-h-screen relative overflow-hidden">
       <StarField />
       
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-4">
+        {/* Header avec boutons de navigation */}
+        {user && (
+          <div className="absolute top-4 right-4 flex gap-2">
+            <Button
+              onClick={() => navigate('/dashboard')}
+              variant="outline"
+              className="border-zodiac-purple/50 text-zodiac-star hover:bg-zodiac-purple/10 bg-transparent backdrop-blur-sm"
+              size="sm"
+            >
+              <User className="w-4 h-4 mr-2" />
+              Mon Profil
+            </Button>
+            <Button
+              onClick={handleLogout}
+              variant="outline"
+              className="border-zodiac-gold/30 text-zodiac-star hover:bg-zodiac-gold/10 bg-transparent backdrop-blur-sm"
+              size="sm"
+            >
+              <LogOut className="w-4 h-4 mr-2" />
+              Déconnexion
+            </Button>
+          </div>
+        )}
+
         {/* Header avec Logo et Nom */}
         <div className="text-center mb-12">
           <div className="mb-6 flex justify-center">
@@ -39,14 +69,25 @@ const Home = () => {
 
         {/* Actions principales */}
         <div className="flex flex-col sm:flex-row gap-4 mb-16">
-          <Button 
-            onClick={() => navigate('/')}
-            className="bg-zodiac-gold hover:bg-zodiac-gold/80 text-black font-bold text-lg px-8 py-4 h-auto"
-            size="lg"
-          >
-            <Sparkles className="w-5 h-5 mr-2" />
-            Commencer votre voyage
-          </Button>
+          {!user ? (
+            <Button 
+              onClick={() => navigate('/')}
+              className="bg-zodiac-gold hover:bg-zodiac-gold/80 text-black font-bold text-lg px-8 py-4 h-auto"
+              size="lg"
+            >
+              <Sparkles className="w-5 h-5 mr-2" />
+              Commencer votre voyage
+            </Button>
+          ) : (
+            <Button 
+              onClick={() => navigate('/dashboard')}
+              className="bg-zodiac-gold hover:bg-zodiac-gold/80 text-black font-bold text-lg px-8 py-4 h-auto"
+              size="lg"
+            >
+              <User className="w-5 h-5 mr-2" />
+              Voir mon profil
+            </Button>
+          )}
           
           <Button 
             onClick={() => navigate('/contact')}

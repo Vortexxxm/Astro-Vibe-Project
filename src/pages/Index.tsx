@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -27,7 +26,7 @@ const Index = () => {
 
   React.useEffect(() => {
     if (user) {
-      navigate('/dashboard');
+      navigate('/home');
     }
   }, [user, navigate]);
 
@@ -53,6 +52,7 @@ const Index = () => {
         title: 'Bienvenue !',
         description: 'Connexion réussie',
       });
+      navigate('/home');
     } catch (error) {
       toast({
         title: 'Erreur',
@@ -98,6 +98,7 @@ const Index = () => {
         title: 'Bienvenue dans Astro Vibe !',
         description: `Votre compte a été créé avec succès. Votre signe est ${zodiacSign}`,
       });
+      navigate('/home');
     } catch (error) {
       toast({
         title: 'Erreur',
