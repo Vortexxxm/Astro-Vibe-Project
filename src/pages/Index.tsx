@@ -40,8 +40,8 @@ const Index = () => {
     
     if (!formData.email || !formData.password) {
       toast({
-        title: 'خطأ',
-        description: 'يرجى ملء جميع الحقول المطلوبة',
+        title: 'Erreur',
+        description: 'Veuillez remplir tous les champs requis',
         variant: 'destructive',
       });
       return;
@@ -50,13 +50,13 @@ const Index = () => {
     try {
       await login(formData.email, formData.password);
       toast({
-        title: 'مرحباً بك!',
-        description: 'تم تسجيل الدخول بنجاح',
+        title: 'Bienvenue !',
+        description: 'Connexion réussie',
       });
     } catch (error) {
       toast({
-        title: 'خطأ',
-        description: 'البيانات غير صحيحة',
+        title: 'Erreur',
+        description: 'Données incorrectes',
         variant: 'destructive',
       });
     }
@@ -67,8 +67,8 @@ const Index = () => {
     
     if (!formData.name || !formData.email || !formData.password || !formData.birthDate) {
       toast({
-        title: 'خطأ',
-        description: 'يرجى ملء جميع الحقول المطلوبة',
+        title: 'Erreur',
+        description: 'Veuillez remplir tous les champs requis',
         variant: 'destructive',
       });
       return;
@@ -76,8 +76,8 @@ const Index = () => {
 
     if (formData.password.length < 6) {
       toast({
-        title: 'خطأ',
-        description: 'كلمة المرور يجب أن تكون 6 أحرف على الأقل',
+        title: 'Erreur',
+        description: 'Le mot de passe doit contenir au moins 6 caractères',
         variant: 'destructive',
       });
       return;
@@ -95,13 +95,13 @@ const Index = () => {
       });
       
       toast({
-        title: 'مرحباً بك في عالم الأبراج!',
-        description: `تم إنشاء حسابك بنجاح. برجك هو ${zodiacSign}`,
+        title: 'Bienvenue dans Astro Vibe !',
+        description: `Votre compte a été créé avec succès. Votre signe est ${zodiacSign}`,
       });
     } catch (error) {
       toast({
-        title: 'خطأ',
-        description: 'حدث خطأ أثناء إنشاء الحساب',
+        title: 'Erreur',
+        description: "Une erreur s'est produite lors de la création du compte",
         variant: 'destructive',
       });
     }
@@ -115,23 +115,27 @@ const Index = () => {
         <div className="w-full max-w-sm sm:max-w-md">
           {/* Header */}
           <div className="text-center mb-6 sm:mb-8">
-            <div className="mb-3 sm:mb-4">
-              <div className="text-4xl sm:text-6xl animate-glow">✨</div>
+            <div className="mb-3 sm:mb-4 flex justify-center">
+              <img 
+                src="/lovable-uploads/b124b8ce-2312-4c1f-8af2-a5fc0b03508e.png" 
+                alt="Astro Vibe Logo" 
+                className="w-20 h-20 sm:w-24 sm:h-24 logo-glow object-contain"
+              />
             </div>
             <h1 className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-zodiac-gold to-zodiac-purple bg-clip-text text-transparent mb-2">
-              عالم الأبراج
+              Astro Vibe
             </h1>
             <p className="text-zodiac-star/80 text-sm sm:text-lg px-2">
-              اكتشف برجك وتعرف على خصائصك الشخصية
+              Découvrez votre signe et vos traits de personnalité
             </p>
           </div>
 
           {/* Auth Form */}
           <Card className="zodiac-card border-2 border-zodiac-gold/30 bg-black/20 backdrop-blur-sm">
             <CardHeader className="pb-4 sm:pb-6">
-              <CardTitle className="text-zodiac-gold text-center text-lg sm:text-xl">ابدأ رحلتك الفلكية</CardTitle>
+              <CardTitle className="text-zodiac-gold text-center text-lg sm:text-xl">Commencez votre voyage astral</CardTitle>
               <CardDescription className="text-zodiac-star/70 text-center text-xs sm:text-sm px-2">
-                سجل دخولك أو أنشئ حساباً جديداً لاكتشاف عالم برجك
+                Connectez-vous ou créez un compte pour découvrir votre univers zodiacal
               </CardDescription>
             </CardHeader>
             <CardContent className="pt-0">
@@ -141,13 +145,13 @@ const Index = () => {
                     value="login" 
                     className="data-[state=active]:bg-zodiac-gold/20 text-xs sm:text-sm"
                   >
-                    تسجيل الدخول
+                    Connexion
                   </TabsTrigger>
                   <TabsTrigger 
                     value="register" 
                     className="data-[state=active]:bg-zodiac-gold/20 text-xs sm:text-sm"
                   >
-                    إنشاء حساب
+                    Inscription
                   </TabsTrigger>
                 </TabsList>
 
@@ -156,7 +160,7 @@ const Index = () => {
                     <div className="space-y-2">
                       <Label htmlFor="login-email" className="text-zodiac-star text-xs sm:text-sm flex items-center gap-2">
                         <Mail className="w-3 h-3 sm:w-4 sm:h-4" />
-                        البريد الإلكتروني
+                        Email
                       </Label>
                       <Input
                         id="login-email"
@@ -164,14 +168,14 @@ const Index = () => {
                         value={formData.email}
                         onChange={(e) => handleInputChange('email', e.target.value)}
                         className="bg-black/30 border-zodiac-gold/30 text-white placeholder:text-gray-400 h-10 sm:h-11 text-sm"
-                        placeholder="ادخل بريدك الإلكتروني"
+                        placeholder="Entrez votre email"
                         required
                       />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="login-password" className="text-zodiac-star text-xs sm:text-sm flex items-center gap-2">
                         <Lock className="w-3 h-3 sm:w-4 sm:h-4" />
-                        كلمة المرور
+                        Mot de passe
                       </Label>
                       <div className="relative">
                         <Input
@@ -180,13 +184,13 @@ const Index = () => {
                           value={formData.password}
                           onChange={(e) => handleInputChange('password', e.target.value)}
                           className="bg-black/30 border-zodiac-gold/30 text-white placeholder:text-gray-400 h-10 sm:h-11 text-sm pr-10"
-                          placeholder="ادخل كلمة المرور"
+                          placeholder="Entrez votre mot de passe"
                           required
                         />
                         <button
                           type="button"
                           onClick={() => setShowPassword(!showPassword)}
-                          className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                          className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
                         >
                           {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                         </button>
@@ -197,7 +201,7 @@ const Index = () => {
                       className="w-full bg-zodiac-gold hover:bg-zodiac-gold/80 text-black font-bold h-10 sm:h-11 text-sm sm:text-base"
                       disabled={isLoading}
                     >
-                      {isLoading ? 'جاري تسجيل الدخول...' : 'دخول ✨'}
+                      {isLoading ? 'Connexion...' : 'Se connecter ✨'}
                     </Button>
                   </form>
                 </TabsContent>
@@ -207,21 +211,21 @@ const Index = () => {
                     <div className="space-y-2">
                       <Label htmlFor="name" className="text-zodiac-star text-xs sm:text-sm flex items-center gap-2">
                         <User className="w-3 h-3 sm:w-4 sm:h-4" />
-                        الاسم الكامل
+                        Nom complet
                       </Label>
                       <Input
                         id="name"
                         value={formData.name}
                         onChange={(e) => handleInputChange('name', e.target.value)}
                         className="bg-black/30 border-zodiac-gold/30 text-white placeholder:text-gray-400 h-10 sm:h-11 text-sm"
-                        placeholder="ادخل اسمك الكامل"
+                        placeholder="Entrez votre nom complet"
                         required
                       />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email" className="text-zodiac-star text-xs sm:text-sm flex items-center gap-2">
                         <Mail className="w-3 h-3 sm:w-4 sm:h-4" />
-                        البريد الإلكتروني
+                        Email
                       </Label>
                       <Input
                         id="email"
@@ -229,14 +233,14 @@ const Index = () => {
                         value={formData.email}
                         onChange={(e) => handleInputChange('email', e.target.value)}
                         className="bg-black/30 border-zodiac-gold/30 text-white placeholder:text-gray-400 h-10 sm:h-11 text-sm"
-                        placeholder="ادخل بريدك الإلكتروني"
+                        placeholder="Entrez votre email"
                         required
                       />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="password" className="text-zodiac-star text-xs sm:text-sm flex items-center gap-2">
                         <Lock className="w-3 h-3 sm:w-4 sm:h-4" />
-                        كلمة المرور
+                        Mot de passe
                       </Label>
                       <div className="relative">
                         <Input
@@ -245,14 +249,14 @@ const Index = () => {
                           value={formData.password}
                           onChange={(e) => handleInputChange('password', e.target.value)}
                           className="bg-black/30 border-zodiac-gold/30 text-white placeholder:text-gray-400 h-10 sm:h-11 text-sm pr-10"
-                          placeholder="6 أحرف على الأقل"
+                          placeholder="6 caractères minimum"
                           required
                           minLength={6}
                         />
                         <button
                           type="button"
                           onClick={() => setShowPassword(!showPassword)}
-                          className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                          className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
                         >
                           {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                         </button>
@@ -261,7 +265,7 @@ const Index = () => {
                     <div className="space-y-2">
                       <Label htmlFor="birthDate" className="text-zodiac-star text-xs sm:text-sm flex items-center gap-2">
                         <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
-                        تاريخ الميلاد
+                        Date de naissance
                       </Label>
                       <Input
                         id="birthDate"
@@ -276,15 +280,15 @@ const Index = () => {
                     <div className="space-y-2">
                       <Label htmlFor="gender" className="text-zodiac-star text-xs sm:text-sm flex items-center gap-2">
                         <Heart className="w-3 h-3 sm:w-4 sm:h-4" />
-                        الجنس (اختياري)
+                        Genre (optionnel)
                       </Label>
                       <Select value={formData.gender} onValueChange={(value) => handleInputChange('gender', value)}>
                         <SelectTrigger className="bg-black/30 border-zodiac-gold/30 text-white h-10 sm:h-11 text-sm">
-                          <SelectValue placeholder="اختر الجنس" />
+                          <SelectValue placeholder="Choisir le genre" />
                         </SelectTrigger>
                         <SelectContent className="bg-black border-zodiac-gold/30">
-                          <SelectItem value="male" className="text-white hover:bg-zodiac-gold/20">ذكر</SelectItem>
-                          <SelectItem value="female" className="text-white hover:bg-zodiac-gold/20">أنثى</SelectItem>
+                          <SelectItem value="male" className="text-white hover:bg-zodiac-gold/20">Homme</SelectItem>
+                          <SelectItem value="female" className="text-white hover:bg-zodiac-gold/20">Femme</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
@@ -293,7 +297,7 @@ const Index = () => {
                       className="w-full bg-zodiac-purple hover:bg-zodiac-purple/80 text-white font-bold h-10 sm:h-11 text-sm sm:text-base"
                       disabled={isLoading}
                     >
-                      {isLoading ? 'جاري إنشاء الحساب...' : 'إنشاء حساب 🌟'}
+                      {isLoading ? 'Création du compte...' : 'Créer un compte 🌟'}
                     </Button>
                   </form>
                 </TabsContent>
@@ -303,11 +307,11 @@ const Index = () => {
 
           {/* Footer */}
           <div className="text-center mt-6 sm:mt-8 text-zodiac-star/60 px-4">
-            <p className="text-xs sm:text-sm">✨ رحلة ممتعة في عالم النجوم والأبراج ✨</p>
+            <p className="text-xs sm:text-sm">✨ Un voyage fascinant dans l'univers des étoiles ✨</p>
             <div className="flex justify-center items-center mt-2 text-xs text-zodiac-star/40">
-              <span>صُنع بـ</span>
+              <span>Fait avec</span>
               <Heart className="w-3 h-3 mx-1 text-red-400" />
-              <span>من أجلك</span>
+              <span>pour vous</span>
             </div>
           </div>
         </div>

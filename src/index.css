@@ -73,8 +73,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-tajawal;
-    direction: rtl;
+    @apply bg-background text-foreground font-inter;
+    direction: ltr;
   }
 }
 
@@ -111,4 +111,14 @@
 .zodiac-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+}
+
+.logo-glow {
+  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.3));
+  transition: all 0.3s ease;
+}
+
+.logo-glow:hover {
+  filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.5));
+  transform: scale(1.05);
 }
