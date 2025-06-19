@@ -1,73 +1,51 @@
-# Welcome to your Lovable project
+🌌 موقع الأبراج Astro Vibe
+مرحبًا بك في Astro Vibe – منصّة فريدة مصممة لمعرفة برجك وصفاتك الإيجابية والسلبية، بطريقة تفاعلية وجذابة، من تطوير يونس مرصاد.
 
-## Project info
+🔮 نبذة عن الموقع
+Astro Vibe هو موقع ويب حديث، يمكِّن المستخدم من:
 
-**URL**: https://lovable.dev/projects/006f211a-97e0-4013-b5e9-6ce3561b8496
+تسجيل الدخول وإنشاء حساب شخصي
 
-## How can I edit this code?
+معرفة البرج حسب تاريخ الميلاد
 
-There are several ways of editing your application.
+عرض شامل لمميزات وسلبيات كل برج
 
-**Use Lovable**
+واجهة ثلاثية الأبعاد برسوم متحركة جذابة
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/006f211a-97e0-4013-b5e9-6ce3561b8496) and start prompting.
+تصميم مخصص لكل برج (مثل العقرب، الأسد، الجدي…)
 
-Changes made via Lovable will be committed automatically to this repo.
+توصيات وتوقعات يومية (قريبًا)
 
-**Use your preferred IDE**
+🧩 الخصائص الأساسية
+ميزة	الوصف
+🔐 تسجيل الدخول	تسجيل حساب عبر البريد الإلكتروني
+🪪 الملف الشخصي	يعرض معلومات البرج المرتبط بك
+🌠 صفحة الأبراج	تفاصيل كاملة عن كل برج من حيث الشخصية، التوافق، القوة والضعف
+🔎 البحث	إمكانية البحث عن برج أو اسم مستخدم
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+🛠️ تقنيات مستخدمة
+Front-End: React.js + Tailwind CSS
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Back-End: Supabase (Auth + Database)
 
-Follow these steps:
+3D Integration: Three.js (لعرض الأبراج ثلاثية الأبعاد)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+تصميم متجاوب: يعمل على جميع الأجهزة (حاسوب - هاتف - تابلت)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+👨‍💻 المطور
+تم تطوير الموقع بواسطة:
 
-# Step 3: Install the necessary dependencies.
-npm i
+يونس مرصاد
+مهتم بالويب، الذكاء الاصطناعي، وتجربة المستخدم
+📧 للتواصل: [vortexxxm@gmail.com]
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+🚀 ملاحظات مستقبلية
+إضافة توقعات يومية مخصصة لكل مستخدم
 
-**Edit a file directly in GitHub**
+دعم الوضع الليلي
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+دعم التوافق بين الأبراج
 
-**Use GitHub Codespaces**
+تطبيق موبايل (iOS / Android)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/006f211a-97e0-4013-b5e9-6ce3561b8496) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+إذا كنت مهتم تعرف شخصيتك بطريقة ممتعة وبصرية، جرب Astro Vibe الآن.
