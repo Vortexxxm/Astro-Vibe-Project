@@ -41,11 +41,11 @@ const Dashboard = () => {
       <div className="relative z-10 min-h-screen p-3 sm:p-4">
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8 gap-4">
-          <div className="text-center sm:text-right">
+          <div className="text-center sm:text-left">
             <h1 className="text-2xl sm:text-3xl font-bold text-zodiac-gold">
-              مرحباً {user.name} 👋
+              Salut {user.name} 👋
             </h1>
-            <p className="text-zodiac-star/70 text-sm sm:text-base">اكتشف عالم برجك الفلكي</p>
+            <p className="text-zodiac-star/70 text-sm sm:text-base">Découvrez l'univers de votre signe astrologique</p>
           </div>
           <Button
             onClick={handleLogout}
@@ -53,8 +53,8 @@ const Dashboard = () => {
             className="border-zodiac-gold/30 text-zodiac-star hover:bg-zodiac-gold/10 bg-transparent text-sm backdrop-blur-sm"
             size="sm"
           >
-            <LogOut className="w-4 h-4 ml-2" />
-            تسجيل الخروج
+            <LogOut className="w-4 h-4 mr-2" />
+            Déconnexion
           </Button>
         </div>
 
@@ -66,7 +66,7 @@ const Dashboard = () => {
                 <ZodiacIcon sign={user.zodiacSign} size="lg" animated />
               </div>
               <CardTitle className="text-2xl sm:text-4xl font-bold text-zodiac-gold">
-                برجك: {userZodiac.name}
+                Votre signe: {userZodiac.name}
               </CardTitle>
               <CardDescription className="text-zodiac-star/80 text-sm sm:text-lg px-2">
                 {userZodiac.description}
@@ -77,12 +77,12 @@ const Dashboard = () => {
                 <div className="bg-gradient-to-br from-green-500/20 to-green-600/20 p-3 sm:p-4 rounded-lg border border-green-500/30">
                   <h3 className="font-bold text-green-400 mb-2 flex items-center justify-center gap-2 text-sm sm:text-base">
                     <Sparkles className="w-4 h-4" />
-                    الإيجابيات
+                    Qualités
                   </h3>
                   <ul className="text-zodiac-star/80 text-xs sm:text-sm space-y-1">
                     {userZodiac.traits.positive.slice(0, 3).map((trait, index) => (
                       <li key={index} className="flex items-center justify-center">
-                        <span className="w-1.5 h-1.5 bg-green-400 rounded-full ml-2"></span>
+                        <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></span>
                         {trait}
                       </li>
                     ))}
@@ -90,12 +90,12 @@ const Dashboard = () => {
                 </div>
                 <div className="bg-gradient-to-br from-red-500/20 to-red-600/20 p-3 sm:p-4 rounded-lg border border-red-500/30">
                   <h3 className="font-bold text-red-400 mb-2 flex items-center justify-center gap-2 text-sm sm:text-base">
-                    ⚠️ نقاط للتحسين
+                    ⚠️ À améliorer
                   </h3>
                   <ul className="text-zodiac-star/80 text-xs sm:text-sm space-y-1">
                     {userZodiac.traits.negative.slice(0, 3).map((trait, index) => (
                       <li key={index} className="flex items-center justify-center">
-                        <span className="w-1.5 h-1.5 bg-red-400 rounded-full ml-2"></span>
+                        <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2"></span>
                         {trait}
                       </li>
                     ))}
@@ -104,12 +104,12 @@ const Dashboard = () => {
                 <div className="bg-gradient-to-br from-zodiac-purple/20 to-zodiac-gold/20 p-3 sm:p-4 rounded-lg border border-zodiac-purple/30">
                   <h3 className="font-bold text-zodiac-purple mb-2 flex items-center justify-center gap-2 text-sm sm:text-base">
                     <Users className="w-4 h-4" />
-                    الخصائص
+                    Caractéristiques
                   </h3>
                   <ul className="text-zodiac-star/80 text-xs sm:text-sm space-y-1">
                     {userZodiac.traits.characteristics.slice(0, 3).map((trait, index) => (
                       <li key={index} className="flex items-center justify-center">
-                        <span className="w-1.5 h-1.5 bg-zodiac-purple rounded-full ml-2"></span>
+                        <span className="w-1.5 h-1.5 bg-zodiac-purple rounded-full mr-2"></span>
                         {trait}
                       </li>
                     ))}
@@ -120,8 +120,8 @@ const Dashboard = () => {
                 onClick={exploreZodiac}
                 className="bg-zodiac-gold hover:bg-zodiac-gold/80 text-black font-bold text-sm sm:text-lg px-6 sm:px-8 py-2 sm:py-3 w-full sm:w-auto"
               >
-                <Search className="w-4 h-4 ml-2" />
-                اكتشف المزيد عن برجك
+                <Search className="w-4 h-4 mr-2" />
+                Découvrez plus sur votre signe
               </Button>
             </CardContent>
           </Card>
@@ -131,7 +131,7 @@ const Dashboard = () => {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-xl sm:text-2xl font-bold text-zodiac-star text-center mb-6 sm:mb-8 flex items-center justify-center gap-2">
             <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />
-            استكشف جميع الأبراج الفلكية
+            Explorez tous les signes astrologiques
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
             {allZodiacSigns.map(([key, zodiac]) => (
@@ -160,19 +160,19 @@ const Dashboard = () => {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
             <div className="bg-gradient-to-br from-zodiac-gold/10 to-zodiac-gold/5 p-3 sm:p-4 rounded-lg border border-zodiac-gold/20 text-center">
               <div className="text-lg sm:text-2xl font-bold text-zodiac-gold">12</div>
-              <div className="text-xs sm:text-sm text-zodiac-star/70">الأبراج</div>
+              <div className="text-xs sm:text-sm text-zodiac-star/70">Signes</div>
             </div>
             <div className="bg-gradient-to-br from-zodiac-purple/10 to-zodiac-purple/5 p-3 sm:p-4 rounded-lg border border-zodiac-purple/20 text-center">
               <div className="text-lg sm:text-2xl font-bold text-zodiac-purple">4</div>
-              <div className="text-xs sm:text-sm text-zodiac-star/70">العناصر</div>
+              <div className="text-xs sm:text-sm text-zodiac-star/70">Éléments</div>
             </div>
             <div className="bg-gradient-to-br from-green-500/10 to-green-500/5 p-3 sm:p-4 rounded-lg border border-green-500/20 text-center">
               <div className="text-lg sm:text-2xl font-bold text-green-400">✨</div>
-              <div className="text-xs sm:text-sm text-zodiac-star/70">سحر فلكي</div>
+              <div className="text-xs sm:text-sm text-zodiac-star/70">Magie</div>
             </div>
             <div className="bg-gradient-to-br from-blue-500/10 to-blue-500/5 p-3 sm:p-4 rounded-lg border border-blue-500/20 text-center">
               <div className="text-lg sm:text-2xl font-bold text-blue-400">🌟</div>
-              <div className="text-xs sm:text-sm text-zodiac-star/70">معرفة</div>
+              <div className="text-xs sm:text-sm text-zodiac-star/70">Connaissance</div>
             </div>
           </div>
         </div>

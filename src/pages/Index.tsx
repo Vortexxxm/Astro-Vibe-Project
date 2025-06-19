@@ -116,11 +116,15 @@ const Index = () => {
           {/* Header */}
           <div className="text-center mb-6 sm:mb-8">
             <div className="mb-3 sm:mb-4 flex justify-center">
-              <img 
-                src="/lovable-uploads/b124b8ce-2312-4c1f-8af2-a5fc0b03508e.png" 
-                alt="Astro Vibe Logo" 
-                className="w-20 h-20 sm:w-24 sm:h-24 logo-glow object-contain"
-              />
+              <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden bg-gradient-to-br from-zodiac-gold/20 to-zodiac-purple/20 p-1 animate-pulse border-2 border-zodiac-gold/30">
+                <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-zodiac-gold to-zodiac-purple flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/b124b8ce-2312-4c1f-8af2-a5fc0b03508e.png" 
+                    alt="Astro Vibe Logo" 
+                    className="w-full h-full object-cover rounded-full logo-glow"
+                  />
+                </div>
+              </div>
             </div>
             <h1 className="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-zodiac-gold to-zodiac-purple bg-clip-text text-transparent mb-2">
               Astro Vibe

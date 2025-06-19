@@ -16,9 +16,9 @@ const ZodiacDetails = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center text-zodiac-star">
-          <h1 className="text-2xl font-bold mb-4">البرج غير موجود</h1>
+          <h1 className="text-2xl font-bold mb-4">Signe non trouvé</h1>
           <Button onClick={() => navigate('/dashboard')}>
-            العودة للرئيسية
+            Retour au tableau de bord
           </Button>
         </div>
       </div>
@@ -39,12 +39,12 @@ const ZodiacDetails = () => {
             variant="outline"
             className="border-zodiac-gold/30 text-zodiac-star hover:bg-zodiac-gold/20"
           >
-            <ArrowLeft className="w-4 h-4 ml-2" />
-            العودة
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Retour
           </Button>
           <div className="text-center">
             <h1 className="text-3xl font-bold text-zodiac-gold">
-              برج {zodiac.name}
+              Signe {zodiac.name}
             </h1>
             <p className="text-zodiac-star/70">({zodiac.startDate.replace('-', '/')} - {zodiac.endDate.replace('-', '/')})</p>
           </div>
@@ -62,7 +62,7 @@ const ZodiacDetails = () => {
                 {zodiac.name} {zodiac.symbol}
               </CardTitle>
               <CardDescription className="text-zodiac-star/80 text-lg">
-                عنصر: {zodiac.element}
+                Élément: {zodiac.element}
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -78,14 +78,14 @@ const ZodiacDetails = () => {
             <Card className="zodiac-card bg-gradient-to-br from-green-500/10 to-green-600/10 border-green-500/30">
               <CardHeader>
                 <CardTitle className="text-green-400 text-center">
-                  ✨ الصفات الإيجابية
+                  ✨ Qualités positives
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
                   {zodiac.traits.positive.map((trait, index) => (
                     <li key={index} className="flex items-center text-zodiac-star/90">
-                      <span className="w-2 h-2 bg-green-400 rounded-full ml-3 animate-pulse"></span>
+                      <span className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse"></span>
                       {trait}
                     </li>
                   ))}
@@ -97,14 +97,14 @@ const ZodiacDetails = () => {
             <Card className="zodiac-card bg-gradient-to-br from-red-500/10 to-red-600/10 border-red-500/30">
               <CardHeader>
                 <CardTitle className="text-red-400 text-center">
-                  ⚠️ نقاط للتحسين
+                  ⚠️ Points à améliorer
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
                   {zodiac.traits.negative.map((trait, index) => (
                     <li key={index} className="flex items-center text-zodiac-star/90">
-                      <span className="w-2 h-2 bg-red-400 rounded-full ml-3 animate-pulse"></span>
+                      <span className="w-2 h-2 bg-red-400 rounded-full mr-3 animate-pulse"></span>
                       {trait}
                     </li>
                   ))}
@@ -116,14 +116,14 @@ const ZodiacDetails = () => {
             <Card className="zodiac-card bg-gradient-to-br from-zodiac-purple/10 to-zodiac-gold/10 border-zodiac-purple/30">
               <CardHeader>
                 <CardTitle className="text-zodiac-purple text-center">
-                  🌟 الخصائص المميزة
+                  🌟 Caractéristiques distinctives
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
                   {zodiac.traits.characteristics.map((trait, index) => (
                     <li key={index} className="flex items-center text-zodiac-star/90">
-                      <span className="w-2 h-2 bg-zodiac-purple rounded-full ml-3 animate-pulse"></span>
+                      <span className="w-2 h-2 bg-zodiac-purple rounded-full mr-3 animate-pulse"></span>
                       {trait}
                     </li>
                   ))}
@@ -137,15 +137,15 @@ const ZodiacDetails = () => {
             <Card className="zodiac-card border-zodiac-gold/30 bg-black/20 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-zodiac-gold text-center">
-                  🔥 العنصر الطبيعي
+                  🔥 Élément naturel
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-center">
                 <div className="text-4xl mb-4">
-                  {zodiac.element === 'النار' && '🔥'}
-                  {zodiac.element === 'الأرض' && '🌍'}
-                  {zodiac.element === 'الهواء' && '💨'}
-                  {zodiac.element === 'الماء' && '💧'}
+                  {zodiac.element === 'Feu' && '🔥'}
+                  {zodiac.element === 'Terre' && '🌍'}
+                  {zodiac.element === 'Air' && '💨'}
+                  {zodiac.element === 'Eau' && '💧'}
                 </div>
                 <p className="text-zodiac-star text-xl font-bold">{zodiac.element}</p>
               </CardContent>
@@ -154,11 +154,11 @@ const ZodiacDetails = () => {
             <Card className="zodiac-card border-zodiac-gold/30 bg-black/20 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="text-zodiac-gold text-center">
-                  🎨 الألوان المحظوظة
+                  🎨 Couleurs porte-bonheur
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="flex justify-center space-x-4 space-x-reverse">
+                <div className="flex justify-center space-x-4">
                   {zodiac.colors.map((color, index) => (
                     <div
                       key={index}
@@ -173,12 +173,12 @@ const ZodiacDetails = () => {
           </div>
 
           {/* Navigation */}
-          <div className="flex justify-center space-x-4 space-x-reverse">
+          <div className="flex justify-center space-x-4">
             <Button
               onClick={() => navigate('/dashboard')}
               className="bg-zodiac-gold hover:bg-zodiac-gold/80 text-black font-bold"
             >
-              العودة للوحة الرئيسية
+              Retour au tableau de bord
             </Button>
           </div>
         </div>
